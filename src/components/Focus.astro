@@ -1,0 +1,15 @@
+---
+const { type, title } = Astro.props;
+---
+
+<style>
+  h2 {
+    color: #222222;
+  }
+  h3 {
+    color: #444444;
+  }
+</style>
+
+{type === "headline" ? <h2>Headline: {title}</h2> : null}
+{type === "highlight" ? <h3>Highlight: {title}</h3> : null}
