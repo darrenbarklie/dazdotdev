@@ -2,14 +2,44 @@
 const { type, title } = Astro.props;
 ---
 
-<style>
-  h2 {
-    color: #222222;
-  }
-  h3 {
-    color: #444444;
-  }
-</style>
-
-{type === "headline" ? <h2>Headline: {title}</h2> : null}
-{type === "highlight" ? <h3>Highlight: {title}</h3> : null}
+{
+  type === "headline" ? (
+    <article role="listitem" class="p-4 border border-gray-600 rounded my-4">
+      <h2 class="text-2xl">Highlight: {title}</h2>
+      <p class="line-clamp-3">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, culpa
+        minus suscipit omnis nobis excepturi, nisi quas est iusto, odit mollitia
+        itaque. Dolores debitis aliquam fuga, temporibus facilis sapiente.
+        Eveniet. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Deleniti, culpa minus suscipit omnis nobis excepturi, nisi quas est
+        iusto, odit mollitia itaque. Dolores debitis aliquam fuga, temporibus
+        facilis sapiente. Eveniet. Lorem ipsum dolor sit amet consectetur
+        adipisicing elit. Deleniti, culpa minus suscipit omnis nobis excepturi,
+        nisi quas est iusto, odit mollitia itaque. Dolores debitis aliquam fuga,
+        temporibus facilis sapiente. Eveniet.
+      </p>
+    </article>
+  ) : null
+}
+{
+  type === "highlight" ? (
+    <article
+      role="listitem"
+      class="px-4 py-3 border border-gray-400 rounded my-4"
+    >
+      <h3 class="text-lg">Highlight: {title}</h3>
+      <p class="text-sm line-clamp-2">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, culpa
+        minus suscipit omnis nobis excepturi, nisi quas est iusto, odit mollitia
+        itaque. Dolores debitis aliquam fuga, temporibus facilis sapiente.
+        Eveniet. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Deleniti, culpa minus suscipit omnis nobis excepturi, nisi quas est
+        iusto, odit mollitia itaque. Dolores debitis aliquam fuga, temporibus
+        facilis sapiente. Eveniet. Lorem ipsum dolor sit amet consectetur
+        adipisicing elit. Deleniti, culpa minus suscipit omnis nobis excepturi,
+        nisi quas est iusto, odit mollitia itaque. Dolores debitis aliquam fuga,
+        temporibus facilis sapiente. Eveniet.
+      </p>
+    </article>
+  ) : null
+}
