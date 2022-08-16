@@ -1,5 +1,5 @@
 ---
-layout: '../layouts/MySiteLayout.astro'
+layout: '../../layouts/Layout.astro'
 title: 'Test Article'
 ---
 # Title
