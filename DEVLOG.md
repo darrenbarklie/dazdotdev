@@ -21,6 +21,9 @@
 - 202208152319 : `npm install -D @tailwindcss/line-clamp`
 - 202208152333 : Setup [typographic defaults](https://www.themes.dev/blog/typographic-defaults-in-tailwind-css/)
 - 202208152337 : `npm install @tailwindcss/typography@latest --save-dev`
+- 202208160849 : Integrate 404 page template
+- 202208161720 : Apply basic styleing 404 page template
+- 202208161810 : Integrate blog index, blog page loop, MDX template 
 
 
 
