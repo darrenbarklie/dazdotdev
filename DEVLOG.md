@@ -29,6 +29,15 @@
 - 202208172225 : Refactor header components
 - 202208172249 : Basic hover animation on Twitter icon
 - 202208172252 : Adding pages for base routing
+- 202208172252 : /about routing to / resolved by [Empty cache and hard reload](https://superuser.com/a/869739)
+- 202208172252 : Docs for [configuring Tailwind base styles](https://docs.astro.build/en/guides/integrations-guide/tailwind/#configapplybasestyles)
+- 202208172330 : Astro config > Tailwind config > applyBaseStyles: false
+- 202208172357 : Apply `class="prose"` to blog article presentation
+
+
+
+
+
 
 
 

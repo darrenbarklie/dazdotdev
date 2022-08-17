@@ -1,4 +1,37 @@
 ---
+import Layout from "../layouts/Layout.astro";
+import "../styles/base.css";
 ---
 
-<h1>About</h1>
+<Layout title="About">
+  <div class="container">
+    <main class="bg-stone-200 p-8">
+      <h1 class="hidden">About</h1>
+
+      <h2>
+        Techhead with affinity for building businesses, startups &amp; learning.
+      </h2>
+
+      <h3>The Gist</h3>
+      <ul>
+        <li>
+          Founder of <a href="https://craftapplied.com" target="_blank">
+            Craft Applied
+          </a>, tech agency est. 2018
+        </li>
+        <li>Fullstack Node, NestJS, Google Cloud</li>
+        <li>Frontend specialist React, NextJS</li>
+        <li>Currently based on Isle of Man</li>
+        <li>
+          Relapsing digital nomad
+          <ul>
+            <li>London</li>
+            <li>New York City</li>
+            <li>Ho Chi Minh City</li>
+          </ul>
+        </li>
+        <li>Nerd for guitar, drums &amp; synth sounds</li>
+      </ul>
+    </main>
+  </div>
+</Layout>

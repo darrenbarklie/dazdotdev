@@ -4,6 +4,10 @@ title: 'Markdown Style Guide'
 description: "Sample of basic Markdown syntax to serve as a reference for authoring posts in Astro."
 date: '2022-08-16'
 ---
+
+<article class="prose prose-base">
+
+
 Here is a sample of some basic Markdown syntax that can be used when writing Markdown content in Astro.
 
 ## Headings
@@ -99,3 +103,6 @@ X<sup>n</sup> + Y<sup>n</sup> = Z<sup>n</sup>
 Press <kbd><kbd>CTRL</kbd>+<kbd>ALT</kbd>+<kbd>Delete</kbd></kbd> to end the session.
 
 Most <mark>salamanders</mark> are nocturnal, and hunt for insects, worms, and other small creatures.
+
+
+</article>
