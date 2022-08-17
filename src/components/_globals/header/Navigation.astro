@@ -1,0 +1,27 @@
+---
+import NavLink from "./NavLink.astro";
+import SocialLink from "./SocialLink.astro";
+---
+
+<nav class="flex h-16" aria-labelledby="primary-navigation">
+  <h2 id="primary-navigation" class="invisible">Primary Navigation</h2>
+
+  <ul class="flex h-full">
+    <li class="flex items-center">
+      <NavLink title="About" url="about" />
+    </li>
+    <li class="flex items-center">
+      <NavLink title="Focus" url="focus" />
+    </li>
+    <li class="flex items-center">
+      <NavLink title="Blog" url="blog" />
+    </li>
+    <li class="flex items-center">
+      <SocialLink
+        title="Twitter"
+        url="https://twitter.com/dazdotdev"
+        img="/svg/logo-social-twitter.svg"
+      />
+    </li>
+  </ul>
+</nav>

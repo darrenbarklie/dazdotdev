@@ -1,0 +1,15 @@
+---
+import Layout from "../layouts/Layout.astro";
+// @ts-ignore: File is not a module known issue
+import Focus from "../components/Focus.astro";
+---
+
+<Layout title="Home">
+  <div class="container">
+    <main>
+      <Focus type="headline" title="Astro Framework" />
+      <Focus type="highlight" title="MDX Content" />
+      <Focus type="highlight" title="Vercel Deployments" />
+    </main>
+  </div>
+</Layout>

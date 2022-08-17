@@ -23,7 +23,12 @@
 - 202208152337 : `npm install @tailwindcss/typography@latest --save-dev`
 - 202208160849 : Integrate 404 page template
 - 202208161720 : Apply basic styleing 404 page template
-- 202208161810 : Integrate blog index, blog page loop, MDX template 
+- 202208161810 : Integrate blog index, blog page loop, MDX template
+- 202208172100 : `npm run dev -- --host`
+- 202208172137 : NavLink & SocialLink components
+- 202208172225 : Refactor header components
+- 202208172249 : Basic hover animation on Twitter icon
+- 202208172252 : Adding pages for base routing
 
 
 
