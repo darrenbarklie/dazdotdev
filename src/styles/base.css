@@ -22,9 +22,9 @@
    *  Ref: https://type-scale.com/
    */
   html {
-    font-size: 100%;
+    /* font-size: 100%; */
   } /* 16px */
-  body {
+  /* body {
     font-weight: 600;
     line-height: 1.75;
     color: #222222;
@@ -60,6 +60,6 @@
   small,
   .text_small {
     font-size: 0.833rem;
-  }
+  } */
 
 }
