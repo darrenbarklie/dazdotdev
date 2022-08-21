@@ -20,7 +20,7 @@ const { id, author, year, month, day, title, publication, url } =
   ({year && year}{month && `, ${month}`}{day && ` ${day}`}) {
     title && <span class="italic">{title}</span>
   }{publication && `, ${publication}`}<br />
-  <small
-    ><a href={url} target="_blank" rel="nofollow noopener noreferrer">{url}</a>
+  <small>
+    <a href={url} target="_blank" rel="nofollow noopener noreferrer">{url}</a>
   </small>
 </li>
