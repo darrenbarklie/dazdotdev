@@ -1,18 +1,18 @@
 ---
 import Layout from "../layouts/Layout.astro";
 
-// Use Astro.glob() to fetch all posts, and then sort them by date.
-const posts = (await Astro.glob("./blog/*.{md,mdx}")).sort(
+// Use Astro.glob() to fetch all articles, and then sort them by date.
+const articles = (await Astro.glob("./articles/*.{md,mdx}")).sort(
   (a, b) =>
     new Date(b.frontmatter.date).valueOf() -
     new Date(a.frontmatter.date).valueOf()
 );
 ---
 
-<Layout title="Blog">
-  <h1>Blog</h1>
+<Layout title="Articles">
+  <h1>Articles</h1>
   {
-    posts.map((post) => (
+    articles.map((post) => (
       <li>
         <time datetime={post.frontmatter.date}>
           {new Date(post.frontmatter.date).toLocaleDateString("en-gb", {

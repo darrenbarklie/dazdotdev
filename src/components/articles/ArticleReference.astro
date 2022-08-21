@@ -1,0 +1,21 @@
+---
+export interface Props {
+  author: string;
+  year: number;
+  month: string;
+  day: number;
+  title: string;
+  publication: string;
+  url: URL;
+}
+
+const { author, year, month, day, title, publication, url } =
+  Astro.props as Props;
+---
+
+<li class="reference">
+  <span class="color-red-500">{author}</span>
+  <span>({year}, {month} {day})</span>
+  <span>{title}</span>
+  <a href={url} target="_blank" rel="nofollow noopener noreferrer">{url}</a>
+</li>

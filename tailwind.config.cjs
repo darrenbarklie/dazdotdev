@@ -12,52 +12,107 @@ module.exports = {
         "2xl": "6rem",
       },
     },
-    // fontFamily: {
-    //   // sans: ["system-ui"],
-    //   // sans: ["system-ui"],
-    // },
-    fontFamily: {
-      sans: ["Graphik", "sans-serif"],
-      serif: ["Merriweather", "serif"],
-    },
     // https://type-scale.com : minor third
-    // fontSize: {
-    //   xs: "0.694rem",
-    //   sm: "0.833rem",
-    //   base: "1rem",
-    //   lg: "1.2rem",
-    //   xl: "1.44rem",
-    //   "2xl": "1.728rem",
-    //   "3xl": "2.074rem",
-    //   "4xl": "2.488rem",
-    // },
+    fontSize: {
+      "4xl": "2.488rem",
+      "3xl": "2.074rem",
+      "2xl": "1.728rem",
+      xl: "1.44rem",
+      lg: "1.2rem",
+      base: "1rem",
+      sm: "0.833rem",
+      xs: "0.694rem",
+    },
+
+    extend: {
+      typography: {
+        DEFAULT: {
+          css: {
+            maxWidth: "72ch",
+            color: "#212212",
+            a: {
+              color: "#3182ce",
+              "&:hover": {
+                color: "#2c5282",
+              },
+            },
+            h1: {
+              fontSize: "2.488rem",
+              margin: "0 0 1.38rem",
+            },
+            h2: {
+              fontSize: "2.074rem",
+              margin: "3rem 0 1.38rem",
+            },
+            h3: {
+              fontSize: "1.728rem",
+              margin: "3rem 0 1.38rem",
+            },
+            h4: {
+              fontSize: "1.44rem",
+              margin: "3rem 0 1.38rem",
+            },
+            h5: {
+              fontSize: "1.2rem",
+              margin: "3rem 0 1.38rem",
+            },
+            h6: {
+              fontSize: "1rem",
+              margin: "3rem 0 1.38rem",
+            },
+            p: {
+              fontSize: "1rem",
+              marginBottom: "1rem",
+            },
+            small: {
+              fontSize: "0.833rem",
+            },
+          },
+        },
+      },
+    },
   },
+
   plugins: [
     require("@tailwindcss/line-clamp"),
     require("@tailwindcss/typography"),
   ],
   // extend: {
-  //   typography: (theme) => ({
+  //   typography: {
   //     DEFAULT: {
   //       css: {
-  //         color: theme("colors.red.700"),
-  //         h2: {
-  //           color: theme("colors.gray.800"),
-  //         },
-  //         h3: {
-  //           color: theme("colors.gray.800"),
-  //         },
-  //         strong: {
-  //           color: theme("colors.gray.800"),
-  //         },
+  //         color: "#f00",
   //         a: {
-  //           color: theme("colors.green.500"),
+  //           color: "#3182ce",
   //           "&:hover": {
-  //             color: theme("colors.green.600"),
+  //             color: "#2c5282",
   //           },
   //         },
   //       },
   //     },
-  //   }),
+  //   },
+
+  //   // typography: (theme) => ({
+  //   //   DEFAULT: {
+  //   //     css: {
+  //   //       color: theme("colors.red.700"),
+  //   //       // h2: {
+  //   //       //   color: theme("colors.gray.800"),
+  //   //       // },
+  //   //       // h3: {
+  //   //       //   color: theme("colors.gray.800"),
+  //   //       // },
+  //   //       // strong: {
+  //   //       //   color: theme("colors.gray.800"),
+  //   //       // },
+  //   //       // a: {
+  //   //       //   color: theme("colors.green.500"),
+  //   //       //   "&:hover": {
+  //   //       //     color: theme("colors.green.600"),
+  //   //       //   },
+  //   //       // },
+  //   //     },
+  //   //   },
+  //   // }),
   // },
 };
