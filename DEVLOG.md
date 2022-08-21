@@ -41,3 +41,4 @@
 - 202208211946 : `npm run astro add mdx`, upgrade MDX VSCode extension
 - 202208212000 : `npm i -D eslint-plugin-mdx`, `npm uninstall -D eslint-plugin-mdx`
 - 202208212033 : Debug MDX syntax highlighting, introduce LayoutArticle component
+- 202208212222 : Integrate citation anchor links, update styling

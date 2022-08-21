@@ -1,5 +1,6 @@
 ---
 export interface Props {
+  id: string;
   author: string;
   year: number;
   month: string;
@@ -9,13 +10,17 @@ export interface Props {
   url: URL;
 }
 
-const { author, year, month, day, title, publication, url } =
+const { id, author, year, month, day, title, publication, url } =
   Astro.props as Props;
 ---
 
-<li class="reference">
-  <span class="color-red-500">{author}</span>
-  <span>({year}, {month} {day})</span>
-  <span>{title}</span>
-  <a href={url} target="_blank" rel="nofollow noopener noreferrer">{url}</a>
+<li id={`reference-${id}`} class="reference pl-0">
+  <span class="text-gray-400">[{id}]</span>
+  <span class="font-semibold">{author}</span>
+  ({year && year}{month && `, ${month}`}{day && ` ${day}`}) {
+    title && <span class="italic">{title}</span>
+  }{publication && `, ${publication}`}<br />
+  <small
+    ><a href={url} target="_blank" rel="nofollow noopener noreferrer">{url}</a>
+  </small>
 </li>

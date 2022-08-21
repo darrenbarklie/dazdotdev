@@ -1,0 +1,11 @@
+---
+export interface Props {
+  id: number;
+}
+
+const { id } = Astro.props as Props;
+---
+
+<sup>
+  <a href={`#reference-${id}`}>[{id}]</a>
+</sup>

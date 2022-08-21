@@ -6,7 +6,9 @@ date: "2022-08-20"
 ---
 
 import ArticleContainer from "../../components/articles/ArticleContainer.astro";
+import ArticleReferences from "../../components/articles/ArticleReferences.astro";
 import ArticleReference from "../../components/articles/ArticleReference.astro";
+import Ref from "../../components/articles/Ref.astro";
 
 # Understanding Architecture Strategies for SaaS Web Applications
 
@@ -16,7 +18,7 @@ My experience as a frontend developer mostly has me focused on delivering a cons
 
 In researching Backend as a Service offerings, I landed on [this supabase issue](https://github.com/supabase/supabase/discussions/1615), which sent me on the right path to strengthen my foundational knowledge.
 
-This blog post summarises my learning from a series of articles published by Microsoft in 2006 to demystify the Software as a Service (SaaS) model:
+This blog post summarises my learning from a series of articles <Ref id="1" /> published by Microsoft in 2006 to demystify the Software as a Service (SaaS) model:
 
 1. [Architecture Strategies for Catching the Long Tail](https://web.archive.org/web/20080510114812/http://msdn.microsoft.com/en-us/library/aa479069.aspx), April 2006, Frederick Chong and Gianpaolo Carraro
    Microsoft Corporation
@@ -87,8 +89,14 @@ https://dev.to/ismaeil_shajar/create-a-multi-tenancy-application-in-nestjs-part-
 
 https://thomasvds.com/schema-based-multitenancy-with-nest-js-type-orm-and-postgres-sql/
 
-<div id="reference">
-  <ol>
-    <ArticleReference title="hey" />
-  </ol>
-</div>
+<ArticleReferences>
+  <ArticleReference
+    id="1"
+    title="Architecture Strategies for Catching the Long Tail"
+    author="Frederick Chong, Gianpaolo Carraro, and Roger Wolter"
+    year="2006"
+    month="June"
+    publication="Microsoft Corporation"
+    url="https://web.archive.org/web/20080510114523/https://msdn.microsoft.com/en-us/library/aa479086.aspx"
+  />
+</ArticleReferences>
