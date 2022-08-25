@@ -42,8 +42,11 @@
 - 202208212000 : `npm i -D eslint-plugin-mdx`, `npm uninstall -D eslint-plugin-mdx`
 - 202208212033 : Debug MDX syntax highlighting, introduce LayoutArticle component
 - 202208212222 : Integrate citation anchor links, update styling
+- 202208240915 : https://www.youtube.com/playlist?list=PLtLXFsdHI8JSX0qJsHfMDSTR3taqvXa5S
 - 202208240918 : Author utils/helpers generateSlug, generateCategoryData
 - 202208252049 : Create HtmlHead component, pass title prop
 - 202208252113 : `npm run astro add solid`
 - 202208252113 : Debug rendering issue on `<slot />` usage
 - 202208252225 : Bump Astro v1.0.9, update compilerOptions for "solid-js"
+- 202208252229 : Integrated working SolidJS example counter
+- 202208252328 : Rollback from trying to integrate `[...page].tsx` with getStaticPaths()
