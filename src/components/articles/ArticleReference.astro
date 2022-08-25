@@ -15,7 +15,7 @@ const { id, author, year, month, day, title, publication, url } =
 ---
 
 <li id={`reference-${id}`} class="reference pl-0">
-  <span class="text-gray-400">[{id}]</span>
+  <span class="text-gray-600">[{id}]</span>
   <span class="font-semibold">{author}</span>
   ({year && year}{month && `, ${month}`}{day && ` ${day}`}) {
     title && <span class="italic">{title}</span>

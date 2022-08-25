@@ -42,3 +42,6 @@
 - 202208212000 : `npm i -D eslint-plugin-mdx`, `npm uninstall -D eslint-plugin-mdx`
 - 202208212033 : Debug MDX syntax highlighting, introduce LayoutArticle component
 - 202208212222 : Integrate citation anchor links, update styling
+- 202208240918 : Author utils/helpers generateSlug, generateCategoryData
+- 202208252049 : Create HtmlHead component, pass title prop
+- 202208252113 : `npm run astro add solid`

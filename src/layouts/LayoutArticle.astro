@@ -1,24 +1,24 @@
 ---
+import HtmlHead from "../components/_globals/HtmlHead.astro";
 import Header from "../components/_globals/header/Header.astro";
 import Footer from "../components/_globals/Footer.astro";
 import ArticleContainer from "../components/articles/ArticleContainer.astro";
 
 export interface Props {
   title: string;
+  categories: any;
 }
 
-const { title } = Astro.props as Props;
+const { content } = Astro.props;
+
+// const { title } = Astro.props as Props;
+// const allCategoriesData = generateCategoryData(categories);
 ---
 
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-    <meta name="generator" content={Astro.generator} />
-    <title>{title} | DazDotDev</title>
-  </head>
+  <HtmlHead title={content.title} />
+
   <body class="font-sans font-normal leading-relaxed font-base">
     <Header />
     <ArticleContainer>
