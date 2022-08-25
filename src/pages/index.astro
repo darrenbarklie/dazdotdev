@@ -1,5 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Counter from "../components/example/Counter";
 
 const title = "Home";
 ---
@@ -8,6 +9,7 @@ const title = "Home";
   <div class="container">
     <main>
       <h1>Home</h1>
+      <Counter client:load>Hello, Solid</Counter>
     </main>
   </div>
 </Layout>
