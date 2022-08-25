@@ -45,3 +45,5 @@
 - 202208240918 : Author utils/helpers generateSlug, generateCategoryData
 - 202208252049 : Create HtmlHead component, pass title prop
 - 202208252113 : `npm run astro add solid`
+- 202208252113 : Debug rendering issue on `<slot />` usage
+- 202208252225 : Bump Astro v1.0.9, update compilerOptions for "solid-js"

@@ -8,12 +8,12 @@ export default function Counter({ children }: any) {
 
   return (
     <>
-      {/* <div class="counter">
+      <div class="counter">
         <button onClick={subtract}>-</button>
         <pre>{count()}</pre>
         <button onClick={add}>+</button>
       </div>
-      <div class="counter-message">{children}</div> */}
+      <div class="counter-message">{children}</div>
     </>
   );
 }
