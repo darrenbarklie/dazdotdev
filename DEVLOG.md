@@ -52,3 +52,7 @@
 - `202208252328` : Rollback from trying to integrate `[...page].tsx` with getStaticPaths()
 - `202208292104` : `https://www.youtube.com/watch?v=ZZ-a7B761Ds&ab_channel=LearnWithJason`
 - `202208292143` : Dynamic list for Navigation, introduce hover styling
+- `202208292211` : Update Focus page content and components
+- `202208292232` : Update About page content
+- `202208292312` : Integrate Work page, draft WorkItem component, introduce Work.md template
+- `202208292352` : Integrate content to WorkItem, map over frontmatter arrays

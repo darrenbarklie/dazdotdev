@@ -4,12 +4,28 @@ import Layout from "../layouts/Layout.astro";
 import Focus from "../components/Focus.astro";
 ---
 
-<Layout title="Home">
+<Layout title="Focus">
   <div class="container">
     <main>
-      <Focus type="headline" title="Astro Framework" />
-      <Focus type="highlight" title="MDX Content" />
-      <Focus type="highlight" title="Vercel Deployments" />
+      <Focus type="headline" title="DazDotDev Blog">
+        Working with <a href="https://astro.build" target="_blank">Astro</a> to migrate
+        from WordPress to embrace a lean, modern and performant framework to help
+        me write, build and deploy faster.
+      </Focus>
+
+      <Focus type="highlight" title="SolidJS">
+        Recent facination with learning how streamlined the <a
+          href="https://www.solidjs.com/"
+          target="_blank">SolidJS</a
+        > developer experience is compaired to React. Starting to hack together some
+        demos to gain confidence.
+      </Focus>
+
+      <Focus type="highlight" title="InstantDB">
+        <a href="https://www.instantdb.com/" target="_blank">InstantDB</a> is really
+        inspiring tech. Got a first proof-of-concept demo working. Enthusiastically
+        building.
+      </Focus>
     </main>
   </div>
 </Layout>

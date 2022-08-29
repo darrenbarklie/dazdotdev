@@ -1,0 +1,43 @@
+---
+export interface Props {
+  content: {
+    id: string;
+    client: string;
+    date: string;
+    location: string;
+    tech: string[];
+    roles: string[];
+    urls: URL[] | string;
+    blurb: string;
+  };
+}
+
+const {
+  content: { id, client, date, location, tech, roles, urls, blurb },
+} = Astro.props as Props;
+---
+
+<li id={`work-${id}`} class="border border-black-100 rounded p-4 mb-4">
+  <header
+    class="flex justify-between items-center border-b border-gray-200 pb-2 mb-4"
+  >
+    <h3 class="text-xl weight-bold">{client}</h3>
+    <span class="text-gray-400">[#{id}]</span>
+  </header>
+
+  <div>
+    <span>{date}</span>
+    <span>{roles}</span>
+    <span>{location}</span>
+  </div>
+
+  <div>
+    {
+      Object.values(tech).map((item) => {
+        return <span class="bg-gray-100 rounded px-2 py-1 mr-1">{item}</span>;
+      })
+    }
+  </div>
+  <span>{urls}</span>
+  <p>{blurb}</p>
+</li>
