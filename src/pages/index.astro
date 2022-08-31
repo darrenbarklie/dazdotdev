@@ -1,6 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Counter from "../components/solid/Counter";
+import CatFact from "../components/solid/CatFact";
 
 const title = "Home";
 ---
@@ -10,6 +11,7 @@ const title = "Home";
     <main>
       <h1>Home</h1>
       <Counter client:load>Hello, Solid</Counter>
+      <CatFact client:load />
     </main>
   </div>
 </Layout>
