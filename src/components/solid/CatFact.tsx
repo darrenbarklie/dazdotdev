@@ -7,9 +7,9 @@ export default function CatFact() {
 
   return (
     <>
-      {/* <For each={catFacts()}>{(item: any) => <li>{item.fact}</li>}</For> */}
-      {/* <h1>{catFacts().current_page}</h1> */}
-      <h1>{JSON.stringify(catFacts())}</h1>
+      <ul>
+        <For each={catFacts()?.data}>{(item: any) => <li>{item.fact}</li>}</For>
+      </ul>
     </>
   );
 }

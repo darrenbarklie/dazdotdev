@@ -1,0 +1,19 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Counter from "../components/solid/Counter";
+import CatFact from "../components/solid/CatFact";
+import AsyncApi from "../components/solid/AsyncApi";
+
+const title = "Test";
+---
+
+<Layout title={title}>
+  <div class="container">
+    <main>
+      <h1>{title}</h1>
+      <Counter client:load>SolidJS counter</Counter>
+      <CatFact client:load />
+      <AsyncApi client:load />
+    </main>
+  </div>
+</Layout>
