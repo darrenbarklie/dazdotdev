@@ -2,13 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
-/* 
- *  astro.config.mjs { config: { applyBaseStyles: false }}
- *  import "../styles/base.css" per page
- */
-
 @layer base {
   html {
     overflow-y: scroll;
+  }
+  
+  body {
+    background: #efefef;
+  }
+  /* TODO(DBB) :: Bug: Cannot apply sr-only class */
+  /* .sr-only {
+    background-color: lime;
+    display: none;
+  } */
+}
+
+@layer components {
+  *:is(h1, h2, h3, h4, h5, h6) {
+    @apply flex items-center gap-2;
   }
 }

@@ -1,5 +1,5 @@
 {
-  "name": "@example/basics",
+  "name": "@dazdotdev/dazdotdev",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -16,11 +16,16 @@
     "@tailwindcss/line-clamp": "^0.4.0",
     "@tailwindcss/typography": "^0.5.4",
     "astro": "^1.0.9",
+    "hast-util-to-string": "^2.0.0",
+    "hastscript": "^7.0.2",
     "prettier": "^2.7.1",
     "prettier-plugin-astro": "^0.5.0",
+    "rehype-autolink-headings": "^6.1.1",
     "solid-js": "^1.4.8"
   },
   "dependencies": {
-    "esbuild": "^0.15.6"
+    "esbuild": "^0.15.6",
+    "rehype-slug": "^5.0.1",
+    "remark-toc": "^8.0.1"
   }
 }

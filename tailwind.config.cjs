@@ -12,6 +12,7 @@ module.exports = {
         "2xl": "6rem",
       },
     },
+
     // https://type-scale.com : minor third
     fontSize: {
       "4xl": "2.488rem",
@@ -77,42 +78,4 @@ module.exports = {
     require("@tailwindcss/line-clamp"),
     require("@tailwindcss/typography"),
   ],
-  // extend: {
-  //   typography: {
-  //     DEFAULT: {
-  //       css: {
-  //         color: "#f00",
-  //         a: {
-  //           color: "#3182ce",
-  //           "&:hover": {
-  //             color: "#2c5282",
-  //           },
-  //         },
-  //       },
-  //     },
-  //   },
-
-  //   // typography: (theme) => ({
-  //   //   DEFAULT: {
-  //   //     css: {
-  //   //       color: theme("colors.red.700"),
-  //   //       // h2: {
-  //   //       //   color: theme("colors.gray.800"),
-  //   //       // },
-  //   //       // h3: {
-  //   //       //   color: theme("colors.gray.800"),
-  //   //       // },
-  //   //       // strong: {
-  //   //       //   color: theme("colors.gray.800"),
-  //   //       // },
-  //   //       // a: {
-  //   //       //   color: theme("colors.green.500"),
-  //   //       //   "&:hover": {
-  //   //       //     color: theme("colors.green.600"),
-  //   //       //   },
-  //   //       // },
-  //   //     },
-  //   //   },
-  //   // }),
-  // },
 };

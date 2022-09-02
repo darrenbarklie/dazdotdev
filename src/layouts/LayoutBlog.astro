@@ -1,0 +1,48 @@
+---
+import HtmlHead from "../components/_globals/HtmlHead.astro";
+import Header from "../components/_globals/header/Header.astro";
+import Footer from "../components/_globals/Footer.astro";
+import BlogContainer from "../components/blog/BlogContainer.astro";
+
+// import "../styles/base.css";
+
+export interface Props {
+  content: {
+    title: string;
+    date: string;
+    excerpt: string;
+    categories: any;
+  };
+}
+
+const {
+  content: { title, date, excerpt },
+} = Astro.props as Props;
+
+const objectDate = new Date(date);
+const [day, month, year] = [
+  objectDate.getDate(),
+  objectDate.toLocaleString("default", { month: "long" }),
+  objectDate.getFullYear(),
+];
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <HtmlHead title={title} />
+
+  <body class="font-sans font-normal leading-relaxed font-base">
+    <Header />
+    <BlogContainer>
+      <h1 class="text-red-500">{title}</h1>
+      <span class="italic">{day} {month} {year}</span>
+
+      <div id="excerpt" class="text-lg font-semibold mt-4 mb-4">
+        {excerpt}
+      </div>
+
+      <slot />
+    </BlogContainer>
+    <Footer />
+  </body>
+</html>
