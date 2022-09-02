@@ -57,3 +57,5 @@
 - `202208292312` : Integrate Work page, draft WorkItem component, introduce Work.md template
 - `202208292352` : Integrate content to WorkItem, map over frontmatter arrays
 - `202209021937` : Test page setup, consumer two APIs with SolidJS components
+- `202209021946` : Debug deployment error "esbuild-linux-64" could not be found
+
