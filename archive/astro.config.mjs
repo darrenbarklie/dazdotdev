@@ -7,7 +7,7 @@ import { toString } from "hast-util-to-string";
 import { h } from "hastscript";
 import autolinkHeadings from "rehype-autolink-headings";
 
-import remarkToc from "remark-toc";
+// import remarkToc from "remark-toc";
 
 // Ref: https://astro.build/config
 // Ref: https://docs.astro.build/en/guides/integrations-guide/tailwind/
@@ -37,9 +37,7 @@ const createSROnlyLabel = (text) => {
 
 export default defineConfig({
   integrations: [
-    tailwind(),
     mdx({
-      remarkPlugins: [remarkToc],
       rehypePlugins: {
         extends: [
           [
@@ -65,6 +63,11 @@ export default defineConfig({
         ],
       },
     }),
+
+    tailwind(),
+    // tailwind({
+    //   config: { applyBaseStyles: true },
+    // }),
     solidJs(),
   ],
 });
