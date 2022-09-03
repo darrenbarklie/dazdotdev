@@ -75,6 +75,9 @@ date: "2022-08-01"
 - `202209030810` : https://stackblitz.com/edit/github-8db7t2?file=src%2Flayouts%2Fmain.astro,src%2Fpages%2Fnew-page.mdx,tsconfig.json
 - `202209022230` : Rebuild new Astro page for testing
 
-- npm create astro@latest
-- npm run astro add mdx
-- npm run astro add tailwind
+- `0822` : branch
+- `0830` : npm create astro@latest
+- `0901` : npm run astro add mdx
+- `0907` : npm run astro add tailwind
+- `1003` : https://docs.astro.build/en/guides/integrations-guide/mdx/#configuration
+- `1310` : Demo rehype-tos, read Intro to [Unified](https://unifiedjs.com/learn/guide/introduction-to-unified/)

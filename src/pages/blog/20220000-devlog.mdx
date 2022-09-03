@@ -1,0 +1,82 @@
+---
+layout: "../../layouts/Layout.astro"
+title: "DevBlog"
+date: "2022-08-01"
+---
+
+## v0.0.0
+
+- `202208131140` : Init Astro project
+- `202208131140` : `npm create astro@latest`
+- `202208131140` : `npm run dev`
+- `202208131155` : Install VSCode ext for Astro
+- `202208131156` : `npm install --save-dev prettier prettier-plugin-astro`
+- `202208131204` : Configure prettier [per recommendations](https://github.com/withastro/prettier-plugin-astro#using-in-vs-code)
+- `202208131214` : Learn component strip for fenced-in expressive/sensitive JS/TS code
+- `202208131220` : Learn component template for HTML output & dynamic data with JS expressions
+- `202208141228` : `File '...Focus.astro' is not a module` is known issue with [scheduled fix](https://github.com/withastro/language-tools/pull/335)
+- `202208141230` : Deploy Vercel, updated build settings
+- `202208152115` : Integrate Header component
+- `202208152120` : Integrate global style: CSS Reset
+- `202208152132` : Integrate global style: System fonts
+- `202208152140` : Integrate global style: Type scale
+- `202208152211` : `npx astro add tailwind`
+- `202208152222` : Restyle Focus components with utility styles
+- `202208152233` : `tailwind.config.theme.container.centre: true`
+- `202208152233` : `tailwind.config.theme.container.padding: 2rem`
+- `202208152319` : `npm install -D @tailwindcss/line-clamp`
+- `202208152333` : Setup [typographic defaults](https://www.themes.dev/blog/typographic-defaults-in-tailwind-css/)
+- `202208152337` : `npm install @tailwindcss/typography@latest --save-dev`
+- `202208160849` : Integrate 404 page template
+- `202208161720` : Apply basic styling 404 page template
+- `202208161810` : Integrate blog index, blog page loop, MDX template
+- `202208172100` : `npm run dev -- --host`
+- `202208172137` : NavLink & SocialLink components
+- `202208172225` : Refactor header components
+- `202208172249` : Basic hover animation on Twitter icon
+- `202208172252` : Adding pages for base routing
+- `202208172252` : /about routing to / resolved by [Empty cache and hard reload](https://superuser.com/a/869739)
+- `202208172252` : Docs for [configuring Tailwind base styles](https://docs.astro.build/en/guides/integrations-guide/tailwind/#configapplybasestyles)
+- `202208172330` : Astro config > Tailwind config > applyBaseStyles: false
+- `202208172357` : Apply `class="prose"` to blog article presentation
+- `202208202030` : Author article 1: Understanding architecture web app
+- `202208211452` : Author article 1: Understanding architecture web app
+- `202208211920` : Integrate prose-base overrides in tailwind.config.cjs
+- `202208211936` : Create ArticleReference component
+- `202208211936` : Fix `.md` to `.mdx` file extensions
+- `202208211946` : `npm run astro add mdx`, upgrade MDX VSCode extension
+- `202208212000` : `npm i -D eslint-plugin-mdx`, `npm uninstall -D eslint-plugin-mdx`
+- `202208212033` : Debug MDX syntax highlighting, introduce LayoutArticle component
+- `202208212222` : Integrate citation anchor links, update styling
+- `202208240915` : https://www.youtube.com/playlist?list=PLtLXFsdHI8JSX0qJsHfMDSTR3taqvXa5S
+- `202208240918` : Author utils/helpers generateSlug, generateCategoryData
+- `202208252049` : Create HtmlHead component, pass title prop
+- `202208252113` : `npm run astro add solid`
+- `202208252113` : Debug rendering issue on `<slot />` usage
+- `202208252225` : Bump Astro v1.0.9, update compilerOptions for "solid-js"
+- `202208252229` : Integrated working SolidJS example counter
+- `202208252328` : Rollback from trying to integrate `[...page].tsx` with getStaticPaths()
+- `202208292104` : `https://www.youtube.com/watch?v=ZZ-a7B761Ds&ab_channel=LearnWithJason`
+- `202208292143` : Dynamic list for Navigation, introduce hover styling
+- `202208292211` : Update Focus page content and components
+- `202208292232` : Update About page content
+- `202208292312` : Integrate Work page, draft WorkItem component, introduce Work.md template
+- `202208292352` : Integrate content to WorkItem, map over frontmatter arrays
+- `202209021937` : Test page setup, consumer two APIs with SolidJS components
+- `202209021946` : Debug deployment error "esbuild-linux-64" could not be found
+- `202209022025` : BlogLayout component, present header, excerpt, format date
+- `202209022144` : `npm install rehype-slug`, `npm install rehype-autolink-headings`
+- `202209022144` : https://leosvel.dev/blog/creating-my-personal-website-with-astro-tailwindcss-and-nx/#improving-the-blog-post-page
+- `202209022208` : https://docs.astro.build/en/guides/integrations-guide/mdx/#inject-frontmatter-via-remark-or-rehype-plugins
+- `202209022208` : `npm install remark-toc`
+- `202209022230` : `npm install -D rehype-autolink-headings hastscript hast-util-to-string`
+- `202209022230` : @import base.css in to HtmlHead component
+- `202209022230` : Debugging: Cannot apply .sr-class to node raw element
+- `202209030810` : https://stackblitz.com/edit/github-8db7t2?file=src%2Flayouts%2Fmain.astro,src%2Fpages%2Fnew-page.mdx,tsconfig.json
+- `202209022230` : Rebuild new Astro page for testing
+
+- `0822` : branch
+- `0830` : npm create astro@latest
+- `0901` : npm run astro add mdx
+- `0907` : npm run astro add tailwind
+- `1003` : https://docs.astro.build/en/guides/integrations-guide/mdx/#configuration

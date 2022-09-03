@@ -1,9 +1,11 @@
 ---
-layout: "../layouts/BlogLayout.astro"
+layout: "../layouts/LayoutBlog.astro"
 title: "Test Page"
 ---
 
 Here is some content
+
+## Table of Contents
 
 ## Sub heading 2
 
