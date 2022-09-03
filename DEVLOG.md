@@ -80,3 +80,5 @@ date: "2022-08-01"
 - `202209031310` : Demo rehype-tos, read Intro to [Unified](https://unifiedjs.com/learn/guide/introduction-to-unified/)
 - `202209031400` : Integrate TOC with remark-tos, anchor link with rehypeAutolinkHeadings, PR
 - `202209031528` : Refactor global styles to tailwind @apply declarations, background gradient
+- `202209031555` : Fix transition on social link, fix background image vertical height
+

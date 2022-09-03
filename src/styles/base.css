@@ -15,19 +15,19 @@
 
 @layer components {
   body {
-    @apply bg-gradient-to-b from-gray-50 to-gray-200
+    @apply bg-gradient-to-b from-gray-50 to-gray-200 min-h-screen
   }
   *:is(h1, h2, h3, h4, h5, h6) {
     @apply flex items-center gap-2
   }
-  *:is(h1, h2, h3, h4, h5, h6) > a {
+  *:is(h2, h3, h4, h5, h6) > a {
     @apply -ml-6
   }
-  *:is(h1, h2, h3, h4, h5, h6) > a .icon.icon-link {
-    @apply block w-4 h-4 bg-center bg-contain opacity-30 bg-[url('/svg/icon-link-anchor.svg')]
+  *:is(h2, h3, h4, h5, h6) > a .icon.icon-link {
+    @apply block w-4 h-4 bg-center bg-contain opacity-10 bg-[url('/svg/icon-link-anchor.svg')]
   }
-  *:is(h1, h2, h3, h4, h5, h6) > a .icon.icon-link:hover {
-    @apply opacity-100
+  *:is(h2, h3, h4, h5, h6) > a .icon.icon-link:hover {
+    @apply opacity-80
   }
 
 }
