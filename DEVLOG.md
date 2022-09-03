@@ -73,11 +73,10 @@ date: "2022-08-01"
 - `202209022230` : @import base.css in to HtmlHead component
 - `202209022230` : Debugging: Cannot apply .sr-class to node raw element
 - `202209030810` : https://stackblitz.com/edit/github-8db7t2?file=src%2Flayouts%2Fmain.astro,src%2Fpages%2Fnew-page.mdx,tsconfig.json
-- `202209022230` : Rebuild new Astro page for testing
-
-- `0822` : branch
-- `0830` : npm create astro@latest
-- `0901` : npm run astro add mdx
-- `0907` : npm run astro add tailwind
-- `1003` : https://docs.astro.build/en/guides/integrations-guide/mdx/#configuration
-- `1310` : Demo rehype-tos, read Intro to [Unified](https://unifiedjs.com/learn/guide/introduction-to-unified/)
+- `202209022230` : Rebuild new Astro page for testing astro component/MD/MDX
+- `202209030822` : branch into `rebuild` to isolate testing
+- `202209030830` : npm create astro@latest, npm run astro add mdx, npm run astro add tailwind
+- `202209031003` : https://docs.astro.build/en/guides/integrations-guide/mdx/#configuration
+- `202209031310` : Demo rehype-tos, read Intro to [Unified](https://unifiedjs.com/learn/guide/introduction-to-unified/)
+- `202209031400` : Integrate TOC with remark-tos, anchor link with rehypeAutolinkHeadings, PR
+- `202209031528` : Refactor global styles to tailwind @apply declarations, background gradient

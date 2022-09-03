@@ -4,6 +4,7 @@ import mdx from "@astrojs/mdx";
 import solidJs from "@astrojs/solid-js";
 
 import remarkToc from "remark-toc";
+import rehypeAutolinkHeadings from "rehype-autolink-headings";
 
 // Ref: https://astro.build/config
 // Ref: https://docs.astro.build/en/guides/integrations-guide/tailwind/
@@ -11,12 +12,14 @@ import remarkToc from "remark-toc";
 
 export default defineConfig({
   markdown: {
-    // Applied to .md and .mdx files
     remarkPlugins: [remarkToc],
+    rehypePlugins: [rehypeAutolinkHeadings],
   },
   integrations: [
     mdx({
       remarkPlugins: [remarkToc],
+      rehypePlugins: [rehypeAutolinkHeadings],
+      extendPlugins: false,
     }),
     tailwind(),
     solidJs(),
