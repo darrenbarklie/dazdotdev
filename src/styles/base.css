@@ -11,10 +11,10 @@
     background: #efefef;
   }
   /* TODO(DBB) :: Bug: Cannot apply sr-only class */
-  /* .sr-only {
+  .sr-only {
     background-color: lime;
     display: none;
-  } */
+  }
 }
 
 @layer components {

@@ -80,3 +80,4 @@ date: "2022-08-01"
 - `0901` : npm run astro add mdx
 - `0907` : npm run astro add tailwind
 - `1003` : https://docs.astro.build/en/guides/integrations-guide/mdx/#configuration
+- `1310` : Demo rehype-tos, read Intro to [Unified](https://unifiedjs.com/learn/guide/introduction-to-unified/)
