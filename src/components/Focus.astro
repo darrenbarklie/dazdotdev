@@ -8,7 +8,6 @@ const { type, title } = Astro.props;
       role="listitem"
       class="px-4 pt-4 pb-6 border border-gray-600 rounded my-4"
     >
-      <span class="text-sm tracking-widest">Headline:</span>
       <h2 class="text-2xl">{title}</h2>
       <div class="text-base">
         <slot />
@@ -22,7 +21,6 @@ const { type, title } = Astro.props;
       role="listitem"
       class="px-4 pt-2 pb-4 border border-gray-400 rounded my-4"
     >
-      <span class="text-xs tracking-widest">Highlight:</span>
       <h3 class="text-lg">{title}</h3>
       <div class="text-sm">
         <slot />

@@ -1,25 +1,19 @@
 ---
-layout: '../../layouts/Layout.astro'
-title: 'Understanding Web Application Multi-Tenant Data Architecture'
+layout: "../../layouts/Layout.astro"
+title: "Understanding Web Application Multi-Tenant Data Architecture"
 description: "The requirement for building services with access to resources isolated by customer requires careful consideration."
-date: '2022-08-20'
+date: "2022-08-20"
 categories:
   - Web Development
   - Infrastructure
   - Something Else
 ---
 
-<article class="prose prose-base">
+### Tenant
 
-
-
+“Tenants” is a term for a group of users or software applications that all share access to the hardware through the underlying software. <Ref id="2" />
 
 ## SaaS Operational Structure
-
-...
-
-https://www.datamation.com/cloud/what-is-multi-tenant-architecture/
-
 
 https://aws.amazon.com/blogs/database/multi-tenant-data-isolation-with-postgresql-row-level-security/
 
@@ -27,8 +21,26 @@ https://supabase.com/blog/supabase-auth#policies
 
 https://www.postgresql.org/docs/current/ddl-rowsecurity.html
 
+https://www.datamation.com/cloud/what-is-multi-tenant-architecture/
 
+https://aws.amazon.com/blogs/database/multi-tenant-data-isolation-with-postgresql-row-level-security/
 
+https://supabase.com/blog/supabase-auth#policies
 
+https://www.postgresql.org/docs/current/ddl-rowsecurity.html
 
-</article>
+https://dev.to/ismaeil_shajar/create-a-multi-tenancy-application-in-nestjs-part-1-microservices-setup-59cm
+
+https://thomasvds.com/schema-based-multitenancy-with-nest-js-type-orm-and-postgres-sql/
+
+<BlogReferences>
+  <BlogReference
+    id="2"
+    title="What is Multi-Tenant Architecture?"
+    author="Andy Patrizio"
+    year="2021"
+    month="February"
+    publication="Datamation"
+    url="https://www.datamation.com/cloud/what-is-multi-tenant-architecture/"
+  />
+</BlogReferences>

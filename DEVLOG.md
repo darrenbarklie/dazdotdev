@@ -81,6 +81,7 @@ date: "2022-08-01"
 - `202209031400` : Integrate TOC with remark-tos, anchor link with rehypeAutolinkHeadings, PR
 - `202209031528` : Refactor global styles to tailwind @apply declarations, background gradient
 - `202209031555` : Fix transition on social link, fix background image vertical height
-
-
-- `20220907196` : Remove articles layouts, components, refactor to blog
+- `202209071906` : Remove articles layouts, components, refactor to blog
+- `202209072030` : Edit Architecture blog post for publication
+- `202209072130` : Tidy About and Focus page content for publication
+- `202209072138` : Restructure WorkItem component content and presentation

@@ -29,5 +29,8 @@
   *:is(h2, h3, h4, h5, h6) > a .icon.icon-link:hover {
     @apply opacity-80
   }
+  .prose :where(blockquote p:first-of-type):not(:where([class~="not-prose"] *))::before {
+    @apply content-none
+  }
 
 }

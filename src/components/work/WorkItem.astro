@@ -17,27 +17,53 @@ const {
 } = Astro.props as Props;
 ---
 
-<li id={`work-${id}`} class="border border-black-100 rounded p-4 mb-4">
+<li id={`work-${id}`} class="border border-gray-400 rounded p-4 pb-6 mb-4">
   <header
-    class="flex justify-between items-center border-b border-gray-200 pb-2 mb-4"
+    class="flex justify-between items-center border-b border-gray-300 pb-2 mb-4"
   >
     <h3 class="text-xl weight-bold">{client}</h3>
     <span class="text-gray-400">[#{id}]</span>
   </header>
 
-  <div>
-    <span>{date}</span>
-    <span>{roles}</span>
-    <span>{location}</span>
+  <div class="flex justify-between mb-2">
+    <div>
+      <span class="mr-2">{date}</span>|<span class="ml-2">{location}</span>
+    </div>
+
+    <div>
+      {
+        Object.values(roles).map((item) => {
+          return <span class="pr-2">{item}</span>;
+        })
+      }
+    </div>
   </div>
 
-  <div>
+  <div class="mt-2 mb-2">
     {
-      Object.values(tech).map((item) => {
-        return <span class="bg-gray-100 rounded px-2 py-1 mr-1">{item}</span>;
+      Object.values(urls).map((item) => {
+        return (
+          <>
+            {/* prettier-ignore */}
+            <a href={item} rel="noopener noreferrer" target="_blank" class="pr-4 underline">{item}</a>
+          </>
+        );
       })
     }
   </div>
-  <span>{urls}</span>
+
+  <div id="tech" class="mt-2 mb-2">
+    {
+      Object.values(tech).map((item) => {
+        return (
+          <>
+            {/* prettier-ignore */}
+            <span class="bg-gray-600 text-white text-xs text-small rounded px-2 py-1 mr-1">{item}</span>
+          </>
+        );
+      })
+    }
+  </div>
+
   <p>{blurb}</p>
 </li>
