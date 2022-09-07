@@ -10,21 +10,22 @@ const posts = (await Astro.glob("./blog/*.{md,mdx}")).sort(
 ---
 
 <Layout title="Blog">
-  <h1>Blog</h1>
-  {
-    posts.map((post) => (
-      <li>
-        <time datetime={post.frontmatter.date}>
-          {new Date(post.frontmatter.date).toLocaleDateString("en-gb", {
-            year: "numeric",
-            month: "short",
-            day: "numeric",
-          })}
-        </time>
-        <a href={post.url} class="font-bold underline">
-          {post.frontmatter.title}
-        </a>
-      </li>
-    ))
-  }
+  <ul>
+    {
+      posts.map((post) => (
+        <li class="grid mb-4">
+          <a href={post.url} class="font-bold underline">
+            {post.frontmatter.title}
+          </a>
+          <time datetime={post.frontmatter.date} class="text-sm">
+            {new Date(post.frontmatter.date).toLocaleDateString("en-gb", {
+              year: "numeric",
+              month: "short",
+              day: "numeric",
+            })}
+          </time>
+        </li>
+      ))
+    }
+  </ul>
 </Layout>

@@ -85,3 +85,4 @@ date: "2022-08-01"
 - `202209072030` : Edit Architecture blog post for publication
 - `202209072130` : Tidy About and Focus page content for publication
 - `202209072138` : Restructure WorkItem component content and presentation
+- `202209072225` : Polishing frontend presentation, max width `max-w-2xl` replacing containers

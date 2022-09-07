@@ -17,6 +17,7 @@ const { title } = Astro.props as Props;
   <body class="font-sans font-normal leading-relaxed font-base">
     <Header />
     <div class="container">
+      <h1 class="text-xl font-bold mb-4">{title}</h1>
       <slot />
     </div>
     <Footer />

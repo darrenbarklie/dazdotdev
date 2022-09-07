@@ -6,7 +6,9 @@ const work = await Astro.glob("../work/*.{md,mdx}");
 ---
 
 <Layout title="Work History">
-  <ul>
-    {work.map((item) => <WorkItem content={item.frontmatter} />)}
-  </ul>
+  <div class="max-w-2xl">
+    <ul>
+      {work.map((item) => <WorkItem content={item.frontmatter} />)}
+    </ul>
+  </div>
 </Layout>

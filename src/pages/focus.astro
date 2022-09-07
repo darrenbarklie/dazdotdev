@@ -1,11 +1,10 @@
 ---
 import Layout from "../layouts/Layout.astro";
-// @ts-ignore: File is not a module known issue
-import Focus from "../components/Focus.astro";
+import Focus from "../components/focus/Focus.astro";
 ---
 
 <Layout title="Focus">
-  <div class="container">
+  <div class="max-w-2xl">
     <main>
       <Focus type="headline" title="DazDotDev Blog">
         Working with <a href="https://astro.build" target="_blank">Astro</a> to migrate
@@ -16,9 +15,11 @@ import Focus from "../components/Focus.astro";
       <Focus type="highlight" title="SolidJS">
         Recent fascination with learning how streamlined the <a
           href="https://www.solidjs.com/"
-          target="_blank">SolidJS</a
-        > developer experience is compaired to React. Starting to hack together some
-        demos to gain confidence.
+          target="_blank"
+        >
+          SolidJS
+        </a> developer experience is compaired to React. Starting to hack together
+        some demos to gain confidence.
       </Focus>
 
       <Focus type="highlight" title="InstantDB">
