@@ -82,3 +82,5 @@ date: "2022-08-01"
 - `202209031528` : Refactor global styles to tailwind @apply declarations, background gradient
 - `202209031555` : Fix transition on social link, fix background image vertical height
 
+
+- `20220907196` : Remove articles layouts, components, refactor to blog
