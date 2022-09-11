@@ -6,9 +6,7 @@ const bookmarks = await Astro.glob("../bookmarks/*.{md,mdx}");
 ---
 
 <Layout title="Bookmarks">
-  <div class="max-w-2xl">
-    <ul>
-      {bookmarks.map((item) => <BookmarkItem content={item.frontmatter} />)}
-    </ul>
-  </div>
+  <ul>
+    {bookmarks.map((item) => <BookmarkItem content={item.frontmatter} />)}
+  </ul>
 </Layout>

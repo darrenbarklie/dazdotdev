@@ -1,4 +1,6 @@
 ---
+import CategoryTags from "../_globals/articles/CategoryTags.astro";
+
 export interface Props {
   content: {
     id: string;
@@ -45,25 +47,14 @@ const {
         return (
           <>
             {/* prettier-ignore */}
-            <a href={item} rel="noopener noreferrer" target="_blank" class="pr-4 underline">{item}</a>
+            <a href={item} rel="noopener noreferrer" target="_blank" class="pr-4 underline font-mono">{item}</a>
           </>
         );
       })
     }
   </div>
 
-  <div id="tech" class="mt-2 mb-2">
-    {
-      Object.values(tech).map((item) => {
-        return (
-          <>
-            {/* prettier-ignore */}
-            <span class="bg-gray-400 text-white text-xs text-small rounded px-2 py-1 mr-1">{item}</span>
-          </>
-        );
-      })
-    }
-  </div>
+  <CategoryTags categories={tech} />
 
   <p>{blurb}</p>
 </li>
