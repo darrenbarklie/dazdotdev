@@ -90,10 +90,30 @@ date: "2022-08-01"
 - `202209072225` : Polishing frontend presentation, max width `max-w-2xl` replacing containers
 - `202209072225` : Flexbox sticky header with tailwindcss: body.flex.flex-col.h-screen, main.flex-grow
 - `202209111101` : Add bookmark for URL Masking article, update bookmarks structure
-
+- `202209111125` : LayoutAncillary, integrate and migrate Privacy Policy v1.0
+- `202209111150` : Privacy Policy v2.0 generation via Termly
+- `202209111259` : Complete MDX formatting of Privacy Policy v2.0
+- `202209111309` : Update Footer compoenent, link to Privacy
+- `202209111312` : Add vercel.json and redirect /privacy
+- `202209111312` : Setup DDD GCP project and Storage bucket
+- `202209111454` : Importing blog content, round 1
+- `202209111559` : Importing blog content, round 2
+- `202209111632` : Importing blog content, round 3 (bookmarks)
+- `202209111632` : Bookmark component, glob bookmarks, structure content
+- `202209111732` : Debug gradient height issue, flexbox sticky footer, bail, solid bg-color
+- `202209111732` : BlogItem component, CategoryTags, CateogoryTag components
+- `202209111814` : Integrate CategoryTags to WorkItems
 
 # ToDo
 
+- [x] Migrate blog post for NestJS migrations
+- [x] Redirect URLs from WP blog in vercel.json
 - [ ] Author post about launching blog
-- [ ] Redirect URLs from WP blog in vercel.json
-- [ ] Migrate blog post for NestJS migrations
+- [ ] Data request page, privacy@daz.dev alias / catchall
+
+
+
+
+# Misc
+
+Bookmarks: Resources and articles curated from mailing lists, webinars, shares, social media and news aggregator sites,

@@ -28,3 +28,7 @@ Helper functions
 ### Table of Contents
 
 Use [remark-toc](https://github.com/remarkjs/remark-toc) to auto-generate a table of contents with the MD string `## Table of Contents`
+
+### Multimedia Storage
+
+Use [dazdotdev-website](https://console.cloud.google.com/storage/browser/dazdotdev-website) storage bucket available for multimedia file uploads.

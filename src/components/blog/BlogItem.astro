@@ -1,0 +1,32 @@
+---
+import CategoryTags from "../_globals/articles/CategoryTags.astro";
+
+export interface Props {
+  content: {
+    id: string;
+    title: string;
+    description: string;
+    date: string;
+    categories: string[];
+  };
+}
+
+const {
+  content: { id, title, description, date, categories },
+} = Astro.props as Props;
+---
+
+<li id={`work-${id}`} class="border border-gray-400 rounded p-4 pb-6 mb-4">
+  <header
+    class="flex justify-between items-center border-b border-gray-400 pb-2 mb-4"
+  >
+    <h3 class="text-xl weight-bold">{title}</h3>
+    <span class="text-gray-400">[{date}]</span>
+  </header>
+
+  <CategoryTags categories={categories} />
+
+  <div class="mt-4">
+    <p>{description}</p>
+  </div>
+</li>
