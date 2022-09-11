@@ -6,16 +6,17 @@
   html {
     overflow-y: scroll;
   }
-  
-  body {
-    background: #efefef;
-  }
-  
 }
 
 @layer components {
   body {
-    @apply bg-gradient-to-b from-gray-50 to-gray-200 min-h-screen
+    @apply flex flex-col h-screen font-normal font-sans leading-relaxed bg-gray-200
+  }
+  body > .container.outer {
+    @apply flex-grow
+  }
+  footer#footer {
+    @apply flex-shrink
   }
   *:is(h1, h2, h3, h4, h5, h6) {
     @apply flex items-center gap-2
