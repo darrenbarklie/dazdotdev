@@ -1,7 +1,7 @@
 ---
 import HtmlHead from "../components/_globals/HtmlHead.astro";
 import Header from "../components/_globals/header/Header.astro";
-import Footer from "../components/_globals/Footer.astro";
+import Footer from "../components/_globals/footer/Footer.astro";
 
 export interface Props {
   content: {
@@ -34,11 +34,11 @@ const [day, month, year] = [
       <article class="prose prose-base">
         <header>
           <h1>{title}</h1>
-          <span>Version: <span class="italic">{version}</span></span>
-          <br />
           <span>
             Last updated: <span class="italic">{day} {month} {year}</span>
           </span>
+          <br />
+          <span>Version: <span class="italic">{version}</span></span>
         </header>
 
         <slot />
