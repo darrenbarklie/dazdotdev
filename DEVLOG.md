@@ -4,6 +4,8 @@ title: "DevBlog"
 date: "2022-08-01"
 ---
 
+# Dev Log
+
 ## v0.0.0
 
 - `202208131140` : Init Astro project
@@ -87,3 +89,11 @@ date: "2022-08-01"
 - `202209072138` : Restructure WorkItem component content and presentation
 - `202209072225` : Polishing frontend presentation, max width `max-w-2xl` replacing containers
 - `202209072225` : Flexbox sticky header with tailwindcss: body.flex.flex-col.h-screen, main.flex-grow
+- `202209111101` : Add bookmark for URL Masking article, update bookmarks structure
+
+
+# ToDo
+
+- [ ] Author post about launching blog
+- [ ] Redirect URLs from WP blog in vercel.json
+- [ ] Migrate blog post for NestJS migrations
