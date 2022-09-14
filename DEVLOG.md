@@ -103,11 +103,15 @@ date: "2022-08-01"
 - `202209111732` : Debug gradient height issue, flexbox sticky footer, bail, solid bg-color
 - `202209111732` : BlogItem component, CategoryTags, CateogoryTag components
 - `202209111814` : Integrate CategoryTags to WorkItems
+- `202209111907` : Integrate Work Experience content, round 1
+- `202209141307` : Integrate Work Experience content, round 2
+- `202209141307` : Integrate Work Experience content, round 3, reorder
 
 # ToDo
 
 - [x] Migrate blog post for NestJS migrations
 - [x] Redirect URLs from WP blog in vercel.json
+- [x] Integrate all Work History
 - [ ] Author post about launching blog
 - [ ] Data request page, privacy@daz.dev alias / catchall
 

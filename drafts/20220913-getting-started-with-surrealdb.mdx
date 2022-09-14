@@ -1,0 +1,70 @@
+---
+layout: "../../layouts/LayoutBlog.astro"
+title: "Getting Started with SurrealDB"
+description: "SurrealDB recently hit their v1.0 release and promise to combine the best of relational, graphic and document databases with realtime updates."
+date: "2022-00-13"
+categories:
+  - Web Development
+  - Database
+  - Strategy
+---
+
+import BlogReferences from "../../components/blog/BlogReferences.astro";
+import BlogReference from "../../components/blog/BlogReference.astro";
+import Ref from "../../components/blog/Ref.astro";
+
+## Table of Contents
+
+## Introduction
+
+Hey
+
+## Commands
+
+```bash
+surreal start --log debug --user root --pass root memory
+```
+
+
+```bash
+
+
+
+DATA="CREATE account SET
+	name = 'ACME Inc',
+	created_at = time::now();"
+curl -k -L -s --compressed POST \
+	--header "Content-Type: application/json" \
+	--header "NS: test" \
+	--header "DB: test" \
+	--user "root:root" \
+	--data "${DATA}" \
+	http://localhost:8000/sql
+
+
+
+curl -k -L -s --compressed POST \
+	--header "Content-Type: application/json" \
+	--header "NS: test" \
+	--header "DB: test" \
+	--user "root:root" \
+	--data "SELECT * FROM article;" \
+	http://localhost:8000/sql
+
+
+
+```
+
+
+
+<BlogReferences>
+  <BlogReference
+    id="1"
+    title="Architecture Strategies for Catching the Long Tail"
+    author="Frederick Chong, Gianpaolo Carraro, and Roger Wolter"
+    year="2006"
+    month="June"
+    publication="Microsoft Corporation"
+    url="https://web.archive.org/web/20080510114523/https://msdn.microsoft.com/en-us/library/aa479086.aspx"
+  />
+</BlogReferences>
