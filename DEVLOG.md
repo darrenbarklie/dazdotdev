@@ -104,8 +104,9 @@ date: "2022-08-01"
 - `202209111732` : BlogItem component, CategoryTags, CateogoryTag components
 - `202209111814` : Integrate CategoryTags to WorkItems
 - `202209111907` : Integrate Work Experience content, round 1
-- `202209141307` : Integrate Work Experience content, round 2
-- `202209141307` : Integrate Work Experience content, round 3, reorder
+- `202209141107` : Integrate Work Experience content, round 2
+- `202209141208` : Integrate Work Experience content, round 3, reorder
+- `202209170920` : Polish content, drafts, pre-deployment
 
 # ToDo
 
