@@ -2,6 +2,7 @@
 import CategoryTags from "../_globals/articles/CategoryTags.astro";
 
 export interface Props {
+  url: string;
   content: {
     id: string;
     title: string;
@@ -12,6 +13,7 @@ export interface Props {
 }
 
 const {
+  url,
   content: { id, title, description, date, categories },
 } = Astro.props as Props;
 ---
@@ -20,8 +22,10 @@ const {
   <header
     class="flex justify-between items-center border-b border-gray-400 pb-2 mb-4"
   >
-    <h3 class="text-xl weight-bold">{title}</h3>
-    <span class="text-gray-400">[{date}]</span>
+    <a href={url}>
+      <h3 class="text-xl underline font-semibold">{title}</h3>
+    </a>
+    <span class="text-gray-400 flex-shrink-0 pl-4">[{date}]</span>
   </header>
 
   <CategoryTags categories={categories} />
