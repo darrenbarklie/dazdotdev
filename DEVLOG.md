@@ -93,7 +93,7 @@ date: "2022-08-01"
 - `202209111125` : LayoutAncillary, integrate and migrate Privacy Policy v1.0
 - `202209111150` : Privacy Policy v2.0 generation via Termly
 - `202209111259` : Complete MDX formatting of Privacy Policy v2.0
-- `202209111309` : Update Footer compoenent, link to Privacy
+- `202209111309` : Update Footer component, link to Privacy
 - `202209111312` : Add vercel.json and redirect /privacy
 - `202209111312` : Setup DDD GCP project and Storage bucket
 - `202209111454` : Importing blog content, round 1
@@ -107,6 +107,10 @@ date: "2022-08-01"
 - `202209141107` : Integrate Work Experience content, round 2
 - `202209141208` : Integrate Work Experience content, round 3, reorder
 - `202209170920` : Polish content, drafts, pre-deployment
+- `202209171047` : Add links to blog content, layout fixes
+- `202209171110` : Integrate favicon
+- `202209171111` : Deploy!
+
 
 # ToDo
 
