@@ -1,0 +1,50 @@
+---
+import HtmlHead from "../components/_globals/HtmlHead.astro";
+import Header from "../components/_globals/header/Header.astro";
+import Footer from "../components/_globals/footer/Footer.astro";
+
+export interface Props {
+  content: {
+    title: string;
+    date: string;
+    version: string;
+  };
+}
+
+const {
+  content: { title, date, version },
+} = Astro.props as Props;
+
+const objectDate = new Date(date);
+const [day, month, year] = [
+  objectDate.getDate(),
+  objectDate.toLocaleString("default", { month: "long" }),
+  objectDate.getFullYear(),
+];
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <HtmlHead title={title} />
+
+  <body>
+    <Header />
+
+    <div class="container outer">
+      <article class="prose prose-base">
+        <header>
+          <h1>{title}</h1>
+          <span>
+            Last updated: <span class="italic">{day} {month} {year}</span>
+          </span>
+          <br />
+          <span>Version: <span class="italic">{version}</span></span>
+        </header>
+
+        <slot />
+      </article>
+    </div>
+
+    <Footer />
+  </body>
+</html>

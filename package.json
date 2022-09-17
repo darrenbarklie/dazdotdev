@@ -1,0 +1,27 @@
+{
+  "name": "@dazdotdev/dazdotdev",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "devDependencies": {
+    "@astrojs/mdx": "^0.10.0",
+    "@astrojs/solid-js": "^1.0.0",
+    "@astrojs/tailwind": "^1.0.0",
+    "@tailwindcss/line-clamp": "^0.4.0",
+    "@tailwindcss/typography": "^0.5.4",
+    "astro": "^1.0.9",
+    "install": "^0.13.0",
+    "npm": "^8.19.1",
+    "prettier": "^2.7.1",
+    "prettier-plugin-astro": "^0.5.0",
+    "rehype-autolink-headings": "^6.1.1",
+    "remark-toc": "^8.0.1",
+    "solid-js": "^1.4.8"
+  }
+}
