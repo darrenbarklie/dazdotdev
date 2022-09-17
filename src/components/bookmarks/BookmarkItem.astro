@@ -1,0 +1,48 @@
+---
+export interface Props {
+  content: {
+    id: string;
+    title: string;
+    source_name: string;
+    source_url: string;
+    description: string;
+    tags: string[];
+  };
+}
+
+const {
+  content: { id, title, source_name, source_url, description, tags },
+} = Astro.props as Props;
+---
+
+<li id={`bookmark-${id}`} class="border border-gray-400 rounded p-4 pb-6 mb-4">
+  <header
+    class="flex justify-between items-center border-b border-gray-400 pb-2 mb-4"
+  >
+    <a
+      href={source_url}
+      rel="noopener noreferrer"
+      target="_blank"
+      class="pr-4 underline"
+    >
+      <h3 class="text-xl font-semibold">{title}</h3>
+    </a>
+    <span class="text-gray-400">[#{id}]</span>
+  </header>
+
+  <div class="flex justify-between mb-2">
+    <div>
+      <span class="font-semibold mr-2">{source_name}</span>
+    </div>
+
+    <div>
+      {
+        Object.values(tags).map((item) => {
+          return <span class="pr-2">{item}</span>;
+        })
+      }
+    </div>
+  </div>
+
+  <p>{description}</p>
+</li>

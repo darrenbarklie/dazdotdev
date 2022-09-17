@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    overflow-y: scroll;
+  }
+}
+
+@layer components {
+  body {
+    @apply flex flex-col h-screen font-normal font-sans leading-relaxed bg-gray-200
+  }
+  body > .container.outer {
+    @apply flex-grow
+  }
+  footer#footer {
+    @apply flex-shrink
+  }
+  *:is(h1, h2, h3, h4, h5, h6) {
+    @apply flex items-center gap-2
+  }
+  *:is(h2, h3, h4, h5, h6) > a {
+    @apply -ml-6
+  }
+  *:is(h2, h3, h4, h5, h6) > a .icon.icon-link {
+    @apply block w-4 h-4 bg-center bg-contain opacity-10 bg-[url('/svg/icon-link-anchor.svg')]
+  }
+  *:is(h2, h3, h4, h5, h6) > a .icon.icon-link:hover {
+    @apply opacity-80
+  }
+  .prose :where(blockquote p:first-of-type):not(:where([class~="not-prose"] *))::before {
+    @apply content-none
+  }
+
+}

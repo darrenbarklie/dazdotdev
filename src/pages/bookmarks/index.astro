@@ -1,0 +1,12 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import BookmarkItem from "../../components/bookmarks/BookmarkItem.astro";
+
+const bookmarks = await Astro.glob("../bookmarks/*.{md,mdx}");
+---
+
+<Layout title="Bookmarks">
+  <ul>
+    {bookmarks.map((item) => <BookmarkItem content={item.frontmatter} />)}
+  </ul>
+</Layout>

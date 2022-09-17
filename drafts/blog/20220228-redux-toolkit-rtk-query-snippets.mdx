@@ -1,0 +1,82 @@
+---
+title: "Redux Toolkit & RTK Query Snippets"
+date: "2022-02-28"
+categories: 
+  - "dev"
+tags: 
+  - "redux"
+  - "redux-toolkit"
+---
+
+## Use Lazy Query
+
+Can be manually triggered on an event, rather than immediately invoked when a component renders.
+
+```typescript
+import { FC } from "react";
+import Button from "@mui/material/Button";
+
+import {
+  useLazyDemoQuery,
+} from "../../features/api/demoApi";
+
+export default const DemoLazyQuery: FC = () => {
+  const [trigger, response, lastArg] = useLazyDemoQuery();
+
+  const triggerLazyQuery = () => {
+    trigger().then((response: any) => console.log(response));
+  };
+
+  return (
+    <>
+      <Button onClick={triggerLazyQuery}>Trigger Query</Button>
+    </>
+  );
+};
+```
+
+## Use Query
+
+```typescript
+import { FC } from "react";
+
+import {
+  useGetUserQuery,
+} from "../../features/api/demoApi";
+
+export default const DemoQuery: FC = () => {
+  const { data: user, error, isLoading } = useGetUserQuery();
+
+  return (
+    <>
+        {/* {error ? (
+          <>Oh no, there was an error</>
+        ) : isLoading ? (
+          <>Loading...</>
+        ) : user ? (
+          <>
+            <h1>
+              Welcome {user ? user.forenames : null}
+            </h1>
+          </>
+        ) : null} */}
+    </>
+  );
+};
+```
+
+## Pass Mutation Response to State
+
+Leverage the `onQueryStarted()` that is called at the start of each individual query or mutation. Lifecycle properties are made available when a query/mutation is started, succeeds or fails.
+
+* * *
+
+##### Reference
+
+[https://redux-toolkit.js.org/rtk-query/usage/manual-cache-updates#optimistic-updates](https://redux-toolkit.js.org/rtk-query/usage/manual-cache-updates#optimistic-updates)
+
+[https://redux-toolkit.js.org/rtk-query/api/createApi#onquerystarted](https://redux-toolkit.js.org/rtk-query/api/createApi#onquerystarted)
+
+[https://github.com/reduxjs/redux-toolkit/issues/1355](https://github.com/reduxjs/redux-toolkit/issues/1355)
+
+[https://stackoverflow.com/questions/69260346/redux-toolkit-query-reduce-state-from-mutation-response](https://stackoverflow.com/questions/69260346/redux-toolkit-query-reduce-state-from-mutation-response)

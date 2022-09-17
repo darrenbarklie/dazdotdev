@@ -1,0 +1,17 @@
+---
+import CategoryTag from "./CategoryTag.astro";
+
+export interface Props {
+  categories: string[];
+}
+
+const { categories } = Astro.props;
+---
+
+<ul class="list-none flex flex-row mb-2">
+  {
+    Object.values(categories).map((item) => {
+      return <CategoryTag title={item} />;
+    })
+  }
+</ul>
