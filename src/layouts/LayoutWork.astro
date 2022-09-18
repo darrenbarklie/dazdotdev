@@ -6,25 +6,12 @@ import Footer from "../components/_globals/footer/Footer.astro";
 export interface Props {
   content: {
     title: string;
-    // date: string;
-    // excerpt: string;
-    // categories: any;
   };
 }
 
 const {
-  content: {
-    title,
-    // date, excerpt
-  },
+  content: { title },
 } = Astro.props as Props;
-
-// const objectDate = new Date(date);
-// const [day, month, year] = [
-//   objectDate.getDate(),
-//   objectDate.toLocaleString("default", { month: "long" }),
-//   objectDate.getFullYear(),
-// ];
 ---
 
 <!DOCTYPE html>
@@ -38,12 +25,7 @@ const {
       <article class="prose prose-base">
         <header>
           <h1>{title}</h1>
-          <!-- <span class="italic">{day} {month} {year}</span> -->
         </header>
-
-        <!-- <div id="excerpt" class="text-lg font-semibold mt-4 mb-4">
-            {excerpt}
-          </div> -->
 
         <slot />
       </article>

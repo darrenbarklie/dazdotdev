@@ -23,11 +23,11 @@ const {
   <header
     class="flex justify-between items-center border-b border-gray-400 pb-2 mb-4"
   >
-    <h3 class="text-xl weight-bold">{client}</h3>
+    <h3 class="text-xl weight-bold leading-tight">{client}</h3>
     <span class="text-gray-400">[#{id}]</span>
   </header>
 
-  <div class="flex justify-between mb-2">
+  <div class="flex flex-wrap justify-between mb-2">
     <div>
       <span class="mr-2">{date}</span>|<span class="ml-2">{location}</span>
 
@@ -54,7 +54,7 @@ const {
     <ul>
       {
         Object.values(roles).map((item) => {
-          return <li class="block text-right pr-2">{item}</li>;
+          return <li class="block text-left md:text-right pr-2">{item}</li>;
         })
       }
     </ul>

@@ -110,6 +110,9 @@ date: "2022-08-01"
 - `202209171047` : Add links to blog content, layout fixes
 - `202209171110` : Integrate favicon
 - `202209171111` : Deploy!
+- `202209171137` : Can't transfer domain, Vercel support case #00099452
+- `202209180845` : Took receipt of domain ownership from Super.so — finally live!
+- `202209181100` : Tidy repo, fix WorkItem responsiveness, deploy content update
 
 
 # ToDo
