@@ -68,6 +68,12 @@ module.exports = {
             small: {
               fontSize: "0.833rem",
             },
+            "code::before": {
+              content: '""',
+            },
+            "code::after": {
+              content: '""',
+            },
           },
         },
       },

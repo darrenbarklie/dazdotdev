@@ -1,0 +1,60 @@
+---
+layout: "../../layouts/LayoutBlog.astro"
+title: "Understanding Resumability with Qwik"
+description: "Y"
+date: 2022-10-04"
+categories:
+  - A
+  - B
+  - C
+---
+
+import BlogReferences from "../../components/blog/BlogReferences.astro";
+import BlogReference from "../../components/blog/BlogReference.astro";
+import Ref from "../../components/blog/Ref.astro";
+
+## Table of Contents
+
+## Introduction
+
+[Qwik](https://qwik.builder.io/) is a new frontend framework that negates the initial bundle download and loading costs necessary for single page applications (SPAs) by introducing the concept of _resumability_ to the frontend.
+
+The premise promises instant loading for web applications of any size or complexity, requiring only 1kb of JavaScript down the wire to bootup and allow for interactivity.
+
+I've been tracking interviews with and screencasts from the core team for a number of weeks and am intrigued by the opportunity to set a new standard across enterprise platforms and eCommerce storefronts.
+
+The ambition for these blog posts is to consume the docs, video content and to demo the technology in a consolodated manner, that might help other devs get to grips with the new principals and technology.
+
+## Foundations
+
+- Qwik homepage
+- Qwik docs
+- Builder.io homepage
+- GitHub repository
+- Discord community
+
+## Core Contributors
+
+- Misko
+- Adam
+- ?
+
+## How do SPAs and MPAs currently work?
+
+To understand what new concepts and opportunities Qwik is introducing, it's useful to briefly recap what is happening with the Single Page applications (SPAs) and Multi Page Applications (MPAs) offerings so popular today.
+
+With a SPA, we are typically loading a very minimal **`index.html`** file that has the principal purpose of requesting a **`bundle.js`** file or series of files.[1] This JavaScript bundle contains the entirety of a frontend codebase that must be downloaded, unpacked, parsed and loaded into a virtual DOM, with remote content fetched and hydrated, all before and interactivity is finally handed over to the user.
+
+Practices such as code-splitting are offered by bundlers like [webpack](https://webpack.js.org/) and [rollup.js](https://rollupjs.org/) go some way to offering opportunities to isolate and lazy-load content at logical boundaries and are encouraged by frameworks such as React[2], Vue[3] and Solid[4]. However this can be limited in effectiveness; requiring additional design and implementation overhead from developers and can still result in over-fetching and loading bottlenecks that degrade UX.
+
+MPAs offer an alternative paradigm by rendering all HTML on a remote server and therefore minimise the amount of JavaScript required to run. This affords a faster first load and overall better initial user experience, but beyond the first load, any further advantages are limited.[5] While MPAs leverage traditional browser-based routing and content fetching, like frameworks Ruby on Rails, Django and Laravel,
+
+---
+
+- 1 https://developer.mozilla.org/en-US/docs/Glossary/SPA
+- 2 https://reactjs.org/docs/code-splitting.html
+- 3 https://router.vuejs.org/guide/advanced/lazy-loading.html
+- 4 https://www.solidjs.com/tutorial/async_lazy
+- 5 https://docs.astro.build/en/concepts/mpa-vs-spa/
+
+- Vid: https://www.youtube.com/watch?app=desktop&v=Mi7udzhcCDQ&ab_channel=MiskoHevery
