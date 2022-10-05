@@ -1,3 +1,4 @@
 {
-  "cSpell.enableFiletypes": ["!javascript", "!json", "mdx"]
+  "cSpell.enableFiletypes": ["!javascript", "!json", "mdx"],
+  "cSpell.enabled": true
 }
