@@ -13,9 +13,6 @@ import BlogReferences from "../../components/blog/BlogReferences.astro";
 import BlogReference from "../../components/blog/BlogReference.astro";
 import Ref from "../../components/blog/Ref.astro";
 
-`test()`
-
-
 ## Table of Contents
 
 ## Introduction
@@ -112,6 +109,10 @@ setInterval( () => {
 createEffect(() => {
   console.log(doubleCount());
 });
+// => 4
+// => 6
+// => 8
+// => ...
 ```
 
 ## Stacking Signals
