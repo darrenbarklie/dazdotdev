@@ -8,8 +8,6 @@ const posts = (await Astro.glob("../blog/*.{md,mdx}")).sort(
     new Date(b.frontmatter.date).valueOf() -
     new Date(a.frontmatter.date).valueOf()
 );
-
-console.log(posts[1].url)
 ---
 
 <Layout title="Blog">

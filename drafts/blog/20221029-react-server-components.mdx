@@ -1,0 +1,160 @@
+---
+layout: "../../layouts/LayoutBlog.astro"
+title: "Let's Learn About React Server Components"
+description: "Y"
+date: 2022-10-29"
+categories:
+  - Frontend
+  - JavaScript
+  - React
+---
+
+import BlogReferences from "../../components/blog/BlogReferences.astro";
+import BlogReference from "../../components/blog/BlogReference.astro";
+import Ref from "../../components/blog/Ref.astro";
+
+## Table of Contents
+
+## Introduction
+
+With the recent announcement and release of Next 13 at 2022's NextJS Conf, the hype around, discussion about and scepticism for React Server Components has intensified.
+
+Vercel and the React core team have closely collaborated to package all of the React 18 functionality into Next 13, to further promote the seamless developer experience that the platform is renowned for.
+
+I'm a fan of NextJS and Vercel, having used it for a number of different profile deployments to date. However React 18, React Server Components (RSC) and Next 13 seem to at once dump on frontend developers all new fundamentals, processes and APIs.
+
+So it's time to dig in to these fundamentals to form a better foundation of understanding and help shape my opinion and decide upon my future adoption.
+
+## Data Fetching with React Server Components
+
+Addressing official React materials, we land on a late-2020 blog post titled [Introducing Zero-Bundle-Size React Server Components](https://reactjs.org/blog/2020/12/21/data-fetching-with-react-server-components.html), which opens with a video by [Dan Abramov](https://twitter.com/dan_abramov) and [Lauren Tan](https://twitter.com/sugarpirate_) titled [Data Fetching with React Server Components](https://www.youtube.com/watch?v=TQQPAU21ZUw).
+
+The project management principle of "good, fast, cheap: pick two" is well understood but when applied to UI dev it presents a challenge. We seek a good user experience, cheap maintenance with fast performance, however these things are at odds with each other.
+
+To contextualise a good quality user experience, the Spotify interface is used as a case study, highlighting how components grouping is well considered, rendering is neatly hierarchical and always with minimal layout shift. It avoids randomised component renders at the whim of network data fetch speeds.
+
+To make this code cheap to maintain, we consider how data is retrieved and distributed. In most cases, using React or Redux, we fetch inside a parent component, then split and disseminate the data through children components. However this creates developer overhead in tracking API calls and endpoints to ensure no over-fetching or orphaned components, as we naturally iterate over our presentation layer.
+
+Finally, the speed our code executes is not necessarily fast using a nested component approach; the order of execution dictates that children components are halted until each parent completes their render, fetch, rerender cycle. This is a known problem called a network waterfall. Because of how we have structured our code, no parallelism can occur, severely limiting fast performance.
+
+We can sacrifice cheap maintenance by fetching all data at the root component, but now each component is not self-sufficient. Alternatively we could allow our components independence in fetching and rendering at will, but at the cost of severe layout shifts and degraded user experience.
+
+Maybe we can't have all three?
+
+### Exploring Solutions
+
+Internally, Facebook solve this problem by combining Relay and GraphQL; each component specifies which data it needs through a GraphQL fragment, with Relay compiling all the fragments into a single call on navigation to a new route. This negates the back-and-forth network behaviour of a waterfall render approach.
+
+While this works, it doesn't make sense to use GraphQL and Relay everywhere. This stack can be overkill for smaller projects and inappropriate for environments support legacy codebases.
+
+Returning to the core problem, we have a network waterfall and this is because of high latency between the server and the client. One approach is to use GraphQL to avoid the waterfall, but another approach is to move our components to the server.
+
+This presents a new workflow:
+
+1. Client requests the server-side parent component
+2. Parent component renders and fetches local data fast
+3. Child component renders and fetches local data fast
+4. Hydrated parent and children components are delivered from the server to the client as the response
+
+These **server components** execute only on the server, they never ship to the client.
+
+After research by the React team, the new approach solved problems beyond only the network waterfall.
+
+## Profiling Server Components
+
+**Server Components have zero effect on the bundle size.** If a RSC imports a load of libraries to facilitate preprocessing, you can be confident you are not shipping this to the user.
+
+As no automated compiler is in use, we developers must be opinioned on which clients go to the server and which stay with the client. This control is good.
+
+**Server components allow us to access the backend resources directly.** While optional, it's nice to be able to read the filesystem directly, without any API layer. Early adopting this approach doesn't prohibit a simple refactor to instead read direct from a database or API.
+
+### Sample React Server Component fetching from server-side side filesystem
+
+```javascript
+import { resolve, join } from "path";
+import { readdir, readFile } from "react-fs";
+import marked from "marked";
+
+const folder = resolve(__dirname + "/../posts");
+
+function Blog() {
+  return readdir(folder).map((name) => (
+    <article key={name}>{marked(readFile(join(folder, file), "utf8"))}</article>
+  ));
+}
+```
+
+### Sample React Server Component fetching from server-side database
+
+```javascript
+import marked from "marked";
+import { db } from "./db";
+
+function Blog() {
+  return db.posts
+    .getAll()
+    .map((post) => <article key={post.id}>{marked(post.html)}</article>);
+}
+```
+
+### Sample React Server Component fetching from API layer
+
+```javascript
+import marked from "marked";
+import { fetch } from "react-fetch";
+
+function Blog() {
+  return fetch("/posts")
+    .json()
+    .map((post) => <article key={post.id}>{marked(post.html)}</article>);
+}
+```
+
+This last example is interesting as the only feature it uses is `react-fetch` which actually works on the client, so this is technically a _shared component_, which works client-side and server-side.
+
+## React IO Libraries
+
+The above demo code presents some new libraries:
+
+- **`react-fs`**: filesystem
+- **`react-pg`**: PostgresSQL
+- **`react-fetch`**: Fetch
+  These are collectively known as **React IO** (input/output), community-maintained wrapper layers to accommodate the design philosophy of matching the package API but extending with some React caching functionality.
+
+## Key Points
+
+### Server Components do not replace GraphQL
+
+Facebook use both GraphQL and Server Components in tandem. While complementary, there is no obligation to use GraphQL to start or later.
+
+### Server Components let you only load necessary code
+
+This doesn't only mean that the Server Components are not being downloaded, but also unused Client Components don't get downloaded.
+
+Consider this example Comment component:
+
+```javascript
+import EditToolbar from "./EditToolbar.client";
+
+function Comment({ comment, currentUser }) {
+  const canEdit = currentUser.isAdmin || currentUser.id === comment.author.id;
+  return (
+    <Box>
+      {canEdit && <EditToolbar />}
+      <p>{comment.text}</p>
+    </Box>
+  );
+}
+```
+
+Even though this code looks like idiomatic React code, the way Server Components are compiled means that if the `canEdit` condition is not met, the subsequent component is not processed and delivered to the client.
+
+The is similar to dynamic imports, but occurs automatically without any additional developer effort. This is made possible by integration with the webpack bundler, extended by a RSC plugin. Collaborators at NextJS and Parcel are contributing to the development of this toolchain.
+
+### Server Components let you decide the trade-off for every concrete use case
+
+...TO CONTINUE
+
+<BlogReferences>
+
+</BlogReferences>
