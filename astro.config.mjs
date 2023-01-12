@@ -11,6 +11,7 @@ import rehypeAutolinkHeadings from "rehype-autolink-headings";
 // Ref: https://docs.astro.build/en/guides/integrations-guide/tailwind/
 
 export default defineConfig({
+  server: { port: 7777, host: true },
   markdown: {
     remarkPlugins: [remarkToc],
     rehypePlugins: [rehypeAutolinkHeadings],
