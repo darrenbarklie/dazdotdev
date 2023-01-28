@@ -13,6 +13,6 @@
     //   "jsx": false
     // }
   },
-  "plugins": ["@typescript-eslint"],
+  "plugins": ["@typescript-eslint", "frontmatter"],
   "rules": {}
 }
